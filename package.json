@@ -1,6 +1,9 @@
 {
   "name": "with-redux-toolkit",
   "version": "1.0.0",
+  "browser": {
+    "child_process": false
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
