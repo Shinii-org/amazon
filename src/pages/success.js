@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import Header from "../components/Header";
-import { CheckCircleIcon } from "@heroicons/react/solid";
-import { useRouter } from "next/router";
+import React, { useEffect } from 'react';
+import Header from '../components/Header';
+import { CheckCircleIcon } from '@heroicons/react/solid';
+import { useRouter } from 'next/router';
 
 function success() {
   const router = useRouter();
   useEffect(() => {
-    router.push("/orders"), undefined, { shallow: true };
+    router.push('/orders'), undefined, { shallow: true };
   }, []);
   useEffect(() => {}, [router.query.counter]);
 
@@ -23,14 +23,10 @@ function success() {
           </div>
           <p>
             Thank you for shopping with us. We'll send a confirmation once your
-            items has shipped, if you would like to check the status of your
-            order(s) please press the link below:
+            items has shipped.
           </p>
-          <button
-            onClick={(() => router.push("/orders"), { shallow: true })}
-            className="button mt-8"
-          >
-            Go to my order
+          <button onClick={() => router.push('/')} className="button mt-8">
+            Go to the main page
           </button>
         </div>
       </main>
